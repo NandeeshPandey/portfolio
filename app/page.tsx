@@ -11,6 +11,8 @@ import Footer from "@/components/Footer";
 import { getSkills, getTestimonials } from "@/sanity/action";
 import { Skill } from "@/types";
 
+export const revalidate = 900;
+
 export default async function Home() {
   const skills = await getSkills();
   const testimonials = await getTestimonials();
