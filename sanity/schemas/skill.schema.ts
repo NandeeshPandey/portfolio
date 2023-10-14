@@ -18,6 +18,11 @@ const schema = {
         hotspot: true,
       },
     },
+    {
+      name: "orderRank",
+      title: "Order Rank",
+      type: "string",
+    },
   ],
 };
 

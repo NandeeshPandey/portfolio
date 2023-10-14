@@ -30,6 +30,11 @@ const schema = {
       type: "string",
       validation: (Rule: any) => Rule.required(),
     },
+    {
+      name: "orderRank",
+      title: "Order Rank",
+      type: "string",
+    },
   ],
 };
 

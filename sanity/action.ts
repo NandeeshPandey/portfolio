@@ -4,7 +4,7 @@ import { readClient } from "./lib/client";
 export const getSkills = async () => {
   try {
     const skills = await readClient.fetch(
-      groq`*[_type == "skill"]{
+      groq`*[_type == "skill"]|order(orderRank){
                 _id,
                 title,
                 image
@@ -19,7 +19,7 @@ export const getSkills = async () => {
 export const getTestimonials = async () => {
   try {
     const testimonials = await readClient.fetch(
-      groq`*[_type == "testimonial"]{
+      groq`*[_type == "testimonial"]|order(orderRank){
         _id,
         name,
         picture,
