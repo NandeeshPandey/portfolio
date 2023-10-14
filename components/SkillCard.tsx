@@ -8,14 +8,14 @@ interface Props {
 
 function SkillCard({ skill }: Props) {
   return (
-    <li className="flex justify-center items-center flex-col min-h-[200px] bg-gray-100 rounded-xl flex-grow flex-shrink basis-[200px]">
+    <li className="flex justify-center items-center flex-col min-h-[100px] bg-gray-100 rounded-xl flex-grow flex-shrink basis-[100px] p-1">
       <Image
         src={urlForImage(skill.image).width(120).url()}
         alt={skill.title}
-        width={100}
-        height={100}
+        width={50}
+        height={50}
       />
-      <p className="text-lg uppercase font-bold mt-6">{skill.title}</p>
+      <p className="text-sm uppercase font-semibold mt-3">{skill.title}</p>
     </li>
   );
 }
