@@ -13,7 +13,7 @@ function Footer() {
       </div>
       <div className="flex gap-10 my-8 justify-center items-center">
         <a
-          href="https://t.me/mytelegramusername"
+          href="https://t.me/+917007168138"
           className="bg-white rounded-full p-2"
         >
           <Image
