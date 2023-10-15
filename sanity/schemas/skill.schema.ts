@@ -19,6 +19,12 @@ const schema = {
       },
     },
     {
+      name: "article",
+      title: "Article",
+      type: "array",
+      of: [{ type: "block" }],
+    },
+    {
       name: "orderRank",
       title: "Order Rank",
       type: "string",

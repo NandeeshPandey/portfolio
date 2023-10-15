@@ -16,6 +16,25 @@ export const getSkills = async () => {
   }
 };
 
+export const getSkillByTitle = async (title: string) => {
+  try {
+    const skill = await readClient.fetch(
+      groq`*[_type == "skill" && lower(title) == lower($title)] {
+        _id,
+        title,
+        image,
+        article
+      }`,
+      {
+        title,
+      }
+    );
+    return skill[0];
+  } catch (error) {
+    console.log(error);
+  }
+};
+
 export const getTestimonials = async () => {
   try {
     const testimonials = await readClient.fetch(
