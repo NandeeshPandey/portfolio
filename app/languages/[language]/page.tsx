@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { PortableText, PortableTextReactComponents } from "@portabletext/react";
 import { urlForImage } from "@/sanity/lib/image";
 
 // actions
@@ -9,10 +8,28 @@ import { getSkillByTitle } from "@/sanity/action";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import CallToAction from "@/components/CallToAction";
+import dynamic from "next/dynamic";
+
+// no-ssr components
+const PortableTextWrapper = dynamic(
+  () => import("../../../components/PortableTextWrapper"),
+  { ssr: false }
+);
+
+export const revalidate = 900;
 
 interface Props {
   params: {
     language: string;
+  };
+}
+
+export async function generateMetadata({ params }: Props) {
+  const language = params.language;
+
+  return {
+    title: language,
+    description: `Discover the Power of ${language} Programming.I showcase the unmatched efficiency, performance, and versatility of the ${language} programming language. Explore real-world ${language} projects and find out how this language can elevate your software solutions in 2023. Interested in harnessing the potential of ${language} for your projects? Let's connect and explore the possibilities together.`,
   };
 }
 
@@ -31,19 +48,6 @@ async function Language({ params }: Props) {
       </>
     );
   }
-
-  const portableTextcomponents: Partial<PortableTextReactComponents> = {
-    marks: {
-      strong: ({ children }) => (
-        <h2 className="text-primary text-lg mt-8 mb-2 font-semibold">
-          {children}
-        </h2>
-      ),
-    },
-    block: {
-      normal: ({ children }) => <p className="text-gray-500">{children}</p>,
-    },
-  };
 
   return (
     <>
@@ -68,10 +72,7 @@ async function Language({ params }: Props) {
           <div className="p-2">
             <article className="bg-white rounded-md max-w-[800px] p-2 mx-auto shadow-md w-full relative z-10  md:p-3 lg:p-4">
               {languageData.article ? (
-                <PortableText
-                  value={languageData.article}
-                  components={portableTextcomponents}
-                />
+                <PortableTextWrapper languageData={languageData} />
               ) : (
                 <p className="my-4 text-center text-xl">
                   No article found for {language}
