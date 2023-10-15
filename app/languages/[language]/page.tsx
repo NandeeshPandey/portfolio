@@ -1,4 +1,6 @@
+import Image from "next/image";
 import { PortableText, PortableTextReactComponents } from "@portabletext/react";
+import { urlForImage } from "@/sanity/lib/image";
 
 // actions
 import { getSkillByTitle } from "@/sanity/action";
@@ -47,8 +49,17 @@ async function Language({ params }: Props) {
     <>
       <Navbar />
       <main>
-        <section className="min-h-[200px] bg-primary text-white flex justify-center items-center py-4 px-2">
-          <h1 className="text-3xl text-center font-bold md:text-5xl lg:text-7xl">
+        <section className="min-h-[200px] bg-primary text-white flex flex-col justify-center items-center py-4 px-2">
+          <div className="w-[120px] h-[120px] rounded-full bg-white flex items-center justify-center  border-4 border-accent">
+            <Image
+              src={urlForImage(languageData.image).width(70).url()}
+              className="block"
+              width={70}
+              height={70}
+              alt={language}
+            />
+          </div>
+          <h1 className="text-3xl text-center font-bold mt-2 md:text-5xl lg:text-7xl">
             {language}
           </h1>
         </section>
