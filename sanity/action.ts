@@ -23,7 +23,9 @@ export const getSkillByTitle = async (title: string) => {
         _id,
         title,
         image,
-        article
+        article,
+        metadataDescription,
+        subTitle
       }`,
       {
         title,

@@ -26,10 +26,13 @@ interface Props {
 
 export async function generateMetadata({ params }: Props) {
   const language = params.language;
+  const languageData = await getSkillByTitle(language);
+
+  const fallbackDescription = `Discover the Power of ${language} Programming.I showcase the unmatched efficiency, performance, and versatility of the ${language} programming language. Explore real-world ${language} projects and find out how this language can elevate your software solutions in 2023. Interested in harnessing the potential of ${language} for your projects? Let's connect and explore the possibilities together.`;
 
   return {
     title: language,
-    description: `Discover the Power of ${language} Programming.I showcase the unmatched efficiency, performance, and versatility of the ${language} programming language. Explore real-world ${language} projects and find out how this language can elevate your software solutions in 2023. Interested in harnessing the potential of ${language} for your projects? Let's connect and explore the possibilities together.`,
+    description: languageData.metadataDescription || fallbackDescription,
   };
 }
 
@@ -66,6 +69,9 @@ async function Language({ params }: Props) {
           <h1 className="text-3xl text-center font-bold mt-2 md:text-5xl lg:text-7xl">
             {language}
           </h1>
+          <h2 className="text-center text-lg mt-4 lg:text-xl">
+            {languageData.subTitle}
+          </h2>
         </section>
         <section className="relative">
           <div className="absolute bg-primary h-[40px] w-full z-0"></div>
