@@ -11,9 +11,9 @@ const portableTextcomponents: Partial<PortableTextReactComponents> = {
       return <p className="text-gray-500">{children}</p>;
     },
     h4: ({ children }) => (
-      <h2 className="text-primary text-lg mt-8 mb-2 font-semibold">
+      <h3 className="text-primary text-lg mt-8 mb-2 font-semibold">
         {children}
-      </h2>
+      </h3>
     ),
   },
 };

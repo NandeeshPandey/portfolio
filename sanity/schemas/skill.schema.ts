@@ -10,6 +10,16 @@ const schema = {
       validation: (Rule: any) => Rule.required(),
     },
     {
+      name: "subTitle",
+      title: "Sub-Title",
+      type: "string",
+    },
+    {
+      name: "metadataDescription",
+      title: "Metadata Description",
+      type: "string",
+    },
+    {
       name: "image",
       title: "Image",
       type: "image",
