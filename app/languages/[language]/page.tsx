@@ -32,7 +32,7 @@ export async function generateMetadata({ params }: Props) {
 
   return {
     title: language,
-    description: languageData.metadataDescription || fallbackDescription,
+    description: languageData?.metadataDescription || fallbackDescription,
   };
 }
 
