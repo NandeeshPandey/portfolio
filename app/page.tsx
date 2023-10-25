@@ -42,7 +42,7 @@ export default async function Home() {
             <Image
               width={600}
               height={600}
-              src="/hero-banner.png"
+              src="/hero-banner.svg"
               alt="hero banner"
             />
           </div>
@@ -66,7 +66,7 @@ export default async function Home() {
         <section className="relative">
           <div className="absolute h-20 bg-primary w-full z-0"></div>
 
-          <ul className="flex justify-center items-center flex-wrap text-center z-10 relative bg-white rounded-md max-w-[400px] mx-auto md:max-w-[900px] shadow-md gap-10 p-5 max-h-[800px] overflow-auto scrollbar-hide">
+          <ul className="flex justify-center items-center flex-wrap text-center z-10 relative bg-white rounded-md max-w-[400px] mx-auto md:max-w-[1200px] shadow-md gap-10 p-5 max-h-[800px] overflow-auto scrollbar-hide">
             {skills?.length > 0 &&
               skills.map((skill: Skill) => (
                 <SkillCard key={skill._id} skill={skill} />
