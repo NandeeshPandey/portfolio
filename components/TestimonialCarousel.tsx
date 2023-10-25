@@ -20,10 +20,19 @@ function TestimonialCarousel({ testimonials }: Props) {
     infinite: true,
     speed: 500,
     arrows: false,
-    slidesToShow: 1,
-    slidesToScroll: 1,
+    slidesToShow: 2,
+    slidesToScroll: 2,
     autoplay: true,
     autoplaySpeed: 6000,
+    responsive: [
+      {
+        breakpoint: 700,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
 
   return (

@@ -15,7 +15,7 @@ function SkillCard({ skill }: Props) {
         className="text-center flex items-center justify-center flex-col"
       >
         <Image
-          src={urlForImage(skill.image).width(120).url()}
+          src={urlForImage(skill.image).width(50).url()}
           alt={skill.title}
           width={50}
           height={50}
