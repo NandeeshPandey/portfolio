@@ -25,7 +25,7 @@ interface Props {
 }
 
 export async function generateMetadata({ params }: Props) {
-  const language = params.language;
+  const language = decodeURIComponent(params.language).trim();
   const languageData = await getSkillByTitle(language);
 
   const fallbackDescription = `Discover the Power of ${language} Programming.I showcase the unmatched efficiency, performance, and versatility of the ${language} programming language. Explore real-world ${language} projects and find out how this language can elevate your software solutions in 2023. Interested in harnessing the potential of ${language} for your projects? Let's connect and explore the possibilities together.`;
@@ -33,11 +33,12 @@ export async function generateMetadata({ params }: Props) {
   return {
     title: language,
     description: languageData?.metadataDescription || fallbackDescription,
+    keywords: ["Nandeesh Pandey", language],
   };
 }
 
 async function Language({ params }: Props) {
-  const language = decodeURIComponent(params.language);
+  const language = decodeURIComponent(params.language).trim();
   const languageData = await getSkillByTitle(language);
   if (!languageData) {
     return (
