@@ -2,8 +2,9 @@ import "./globals.css";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Nandeesh Pandey",
+  title: "Codinghelp",
   description: "connecting vision with expertise",
+  keywords: ["codinghelp", "coding help"],
 };
 
 export default function RootLayout({

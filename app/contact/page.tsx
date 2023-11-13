@@ -1,7 +1,14 @@
 import Image from "next/image";
+import { Metadata } from "next";
 
 // components
 import Navbar from "@/components/Navbar";
+
+export const metadata: Metadata = {
+  title: "CodingHelp | Contact Page",
+  description: "codinghelp contact page",
+  keywords: ["codinghelp contact"],
+};
 
 export default function Contact() {
   return (
