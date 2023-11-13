@@ -18,9 +18,9 @@ function Navbar() {
 
   return (
     <header className="bg-white sticky top-0 shadow-md z-50">
-      <nav className="flex items-center py-5 px-4 justify-between max-w-[1200px] mx-auto relative">
+      <nav className="flex items-center py-3 px-4 justify-between max-w-[1200px] mx-auto relative">
         <Link href="/" className="text-xl text-black">
-          <Image src="/logo.svg" alt="Nandeesh Pandey" width={30} height={30} />
+          <Image src="/logo.png" alt="Codinghelp" width={60} height={60} />
         </Link>
 
         <ul

@@ -33,7 +33,12 @@ export async function generateMetadata({ params }: Props) {
   return {
     title: language,
     description: languageData?.metadataDescription || fallbackDescription,
-    keywords: ["Nandeesh Pandey", language],
+    keywords: [
+      "codinghelp",
+      `codinghelp ${language}`,
+      language,
+      `${language} coding help`,
+    ],
   };
 }
 

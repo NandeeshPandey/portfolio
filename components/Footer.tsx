@@ -5,7 +5,9 @@ function Footer() {
     <footer className="bg-primary p-6 md:p-10 lg:p-20 text-white">
       <div className="flex flex-col justify-center items-center container mx-auto">
         <div className="text-center flex items-center flex-col justify-center">
-          <Image src="/logo.svg" alt="Nandeesh Pandey" width={70} height={70} />
+          <div className="bg-white rounded-md p-1">
+            <Image src="/logo.png" alt="Codinghelp" width={60} height={60} />
+          </div>
           <p className="mt-6">Living, Learning, & Leveling Up</p>
           <p className="mt-2">One day at a time</p>
         </div>
@@ -59,7 +61,7 @@ function Footer() {
               />
             </a>
             <a
-              href="mailto:nandeespandey@gmail.com"
+              href="mailto:nandeespandey1@gmail.com"
               className="bg-white rounded-full p-2"
             >
               <Image
