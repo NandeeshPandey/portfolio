@@ -50,7 +50,7 @@ function Footer() {
           </p>
           <div className="flex gap-5 justify-center items-center mt-4">
             <a
-              href="https://t.me/+917007168138"
+              href="https://t.me/codinghelptech"
               className="bg-white rounded-full p-2"
             >
               <Image
@@ -72,7 +72,7 @@ function Footer() {
               />
             </a>
             <a
-              href="https://wa.me/917007168138"
+              href="https://wa.me/+918127181252"
               className="bg-white rounded-full p-2"
             >
               <Image
@@ -80,6 +80,17 @@ function Footer() {
                 width={28}
                 height={28}
                 alt="whatsapp"
+              />
+            </a>
+            <a
+              href="https://discordapp.com/users/1176033060739874935"
+              className="bg-white rounded-full p-2"
+            >
+              <Image
+                src="/social-icons/discord.png"
+                width={28}
+                height={28}
+                alt="discord"
               />
             </a>
           </div>

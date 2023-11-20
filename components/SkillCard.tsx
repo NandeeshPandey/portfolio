@@ -12,7 +12,7 @@ function SkillCard({ skill }: Props) {
     <li className="flex justify-center items-center min-h-[100px] bg-gray-100 rounded-xl flex-grow flex-shrink basis-[100px] p-1 cursor-pointer group transition duration-300 hover:bg-accent hover:shadow-[0_0_10px_2px] hover:shadow-accent">
       <Link
         href={`/languages/${encodeURIComponent(skill.title)}`}
-        className="text-center flex items-center justify-center flex-col"
+        className="text-center flex items-center justify-center flex-col w-full"
       >
         <Image
           src={urlForImage(skill.image).width(50).url()}

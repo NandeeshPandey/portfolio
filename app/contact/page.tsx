@@ -28,11 +28,12 @@ export default function Contact() {
           <div className="my-10 text-center">
             <p className="text-lg">
               Reach me at:{" "}
-              <span className="text-primary">contact@gmail.com</span>
+              <span className="text-primary">nandeeshpandey1@gmail.com</span>
             </p>
           </div>
           <form
-            action="/"
+            action="https://formspree.io/f/maygzvbw"
+            method="post"
             className="max-w-[800px] mx-auto mt-16 border p-4 rounded-md flex flex-col gap-6 shadow-md lg:p-6"
           >
             <div className="flex flex-col gap-2">
