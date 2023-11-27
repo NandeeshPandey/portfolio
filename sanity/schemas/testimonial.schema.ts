@@ -13,7 +13,6 @@ const schema = {
       name: "picture",
       title: "Picture",
       type: "image",
-      validation: (Rule: any) => Rule.required(),
       options: {
         hotspot: true,
       },
