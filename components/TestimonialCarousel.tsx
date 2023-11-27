@@ -24,6 +24,8 @@ function TestimonialCarousel({ testimonials }: Props) {
     slidesToScroll: 2,
     autoplay: true,
     autoplaySpeed: 6000,
+    touchMove: true,
+    touchThreshold: 100,
     responsive: [
       {
         breakpoint: 700,
